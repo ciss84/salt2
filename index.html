@@ -67,7 +67,8 @@
                 window.location.replace("lndex.html");
             };
         window.applicationCache.onerror=function() {
-            window.location.replace("lndex.html");};
+            document.getElementById("done").innerHTML="Something Went Wrong or Page Already Cached...[Clear Web-data & try again]";
+        }
     </script>
 </head>
 <body>
