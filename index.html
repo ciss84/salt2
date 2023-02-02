@@ -61,14 +61,13 @@
             document.getElementById("log").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%"
         }
         window.applicationCache.oncached=function() {
-            document.getElementById("done").innerHTML="Offline Cache Completed. Now turn off internet & reopen PS4 Browser!";
+            document.getElementById("done").innerHTML="Offline Cache Completed !";setTimeout(function(){window.location.reload("log"); }, 3000);
         }
         window.applicationCache.onnoupdate=function() {
                 window.location.replace("lndex.html");
             };
         window.applicationCache.onerror=function() {
-            document.getElementById("done").innerHTML="Something Went Wrong or Page Already Cached...[Clear Web-data & try again]";
-        }
+            window.location.replace("lndex.html");};
     </script>
 </head>
 <body>
